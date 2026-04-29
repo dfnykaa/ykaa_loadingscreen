@@ -1,0 +1,62 @@
+body, html {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    overflow: hidden; font-family: 'Quicksand', sans-serif; color: white;
+    cursor: default;
+}
+
+#bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    transition: background-image 1.2s ease-in-out; z-index: -2;
+}
+
+.overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: -1;
+}
+
+.controls-wrapper { position: absolute; top: 40px; right: 40px; width: 300px; }
+
+.glass-box {
+    background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(10px);
+    padding: 25px; border-radius: 20px; border-top: 3px solid #7704c4;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.box-header { font-size: 10px; letter-spacing: 3px; color: #7704c4; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
+
+.control-rows .row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 10px; }
+
+kbd { background: #7704c4; padding: 3px 8px; border-radius: 5px; font-family: Arial; font-weight: bold; font-size: 10px; color: white; }
+
+.divider { height: 1px; background: rgba(255,255,255,0.1); margin: 20px 0; }
+
+.mini-label { font-size: 9px; color: #666; margin: 0; letter-spacing: 1px; }
+#artist-name { font-size: 18px; font-weight: 700; color: #fff; margin: 5px 0 0 0; }
+#song-name { font-size: 14px; color: #7704c4; margin: 2px 0 0 0; }
+
+.footer-area { position: absolute; bottom: 60px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+.welcome-pill {
+    background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(126, 4, 196, 0.4);
+    padding: 10px 30px; border-radius: 50px; font-size: 15px; margin-bottom: 25px;
+    display: flex; align-items: center; gap: 12px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.dot { width: 8px; height: 8px; background: #7704c4; border-radius: 50%; box-shadow: 0 0 10px #7704c4; animation: pulse 1.5s infinite; }
+
+@keyframes pulse { 0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; } }
+
+.loading-container { width: 450px; }
+
+.progress-info { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 8px; letter-spacing: 1px; color: rgba(255,255,255,0.5); }
+
+.progress-track { width: 100%; height: 5px; background: rgba(255,255,255,0.05); border-radius: 10px; }
+
+#progress-bar {
+    width: 0%; height: 100%; background: #7704c4;
+    box-shadow: 0 0 15px rgba(71, 4, 196, 0.7);
+    transition: width 0.4s ease; border-radius: 10px;
+}
